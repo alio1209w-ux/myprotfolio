@@ -1,0 +1,141 @@
+body {
+    background:
+        radial-gradient(circle at top left, #49246e, transparent 35%),
+        radial-gradient(circle at bottom right, #124b5b, transparent 35%),
+        #090d20;
+
+    color: white;
+}
+
+/* Main container */
+
+.about-container {
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 35px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 45px;
+
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(139,92,246,0.5);
+    border-radius: 25px;
+
+    box-shadow: 0 0 30px rgba(139,92,246,0.15);
+
+    animation: slideUp 1s ease;
+}
+
+/* Profile image */
+
+.about-image img {
+    width: 230px;
+    height: 230px;
+    object-fit: cover;
+
+    border-radius: 50%;
+    border: 5px solid #55e6d0;
+
+    box-shadow: 0 0 25px #55e6d0;
+
+    transition: 0.5s;
+}
+
+.about-image img:hover {
+    transform: scale(1.08) rotate(4deg);
+    box-shadow: 0 0 40px #ff75c3;
+    border-color: #ff75c3;
+}
+
+/* About information */
+
+.about-info h1 {
+    color: #55e6d0;
+    font-size: 32px;
+}
+
+.about-info h2 {
+    color: #ff75c3;
+    font-size: 21px;
+}
+
+.about-info p {
+    color: #d7d9eb;
+    font-size: 17px;
+    line-height: 2;
+}
+
+/* Information cards */
+
+.about-card {
+    max-width: 850px;
+    margin: 25px auto;
+    padding: 25px;
+
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(85,230,208,0.3);
+    border-radius: 20px;
+
+    transition: 0.4s;
+    animation: slideUp 1s ease;
+}
+
+.about-card:hover {
+    transform: translateY(-8px);
+    border-color: #ff75c3;
+
+    box-shadow:
+        0 0 15px rgba(255,117,195,0.3),
+        0 0 30px rgba(85,230,208,0.15);
+}
+
+.about-card h2 {
+    color: #ff75c3;
+    margin-bottom: 20px;
+}
+
+.about-card p {
+    color: #e1e5f5;
+    line-height: 2;
+    font-size: 17px;
+}
+
+/* Animation */
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive design */
+
+@media (max-width: 700px) {
+
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+        margin: 25px 15px;
+    }
+
+    .about-image img {
+        width: 180px;
+        height: 180px;
+    }
+
+    .about-info h1 {
+        font-size: 25px;
+    }
+
+    .about-card {
+        margin: 20px 15px;
+    }
+}

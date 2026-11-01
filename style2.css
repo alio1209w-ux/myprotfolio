@@ -1,0 +1,123 @@
+body {
+    background:
+        radial-gradient(circle at top right, #35205e, transparent 40%),
+        linear-gradient(135deg, #090d20, #17132f, #101b35);
+    color: #ffffff;
+}
+
+/* Main title */
+main h1 {
+    font-size: 42px;
+    color: #55e6d0;
+    text-shadow: 0 0 20px rgba(85, 230, 208, 0.5);
+    margin-bottom: 20px;
+    animation: titleGlow 3s infinite alternate;
+}
+
+/* Intro paragraph */
+main > p {
+    color: #c8c9e8;
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+/* Skill cards */
+main section {
+    position: relative;
+    overflow: hidden;
+    max-width: 750px;
+    margin: 25px auto;
+    padding: 30px;
+    border-radius: 22px;
+
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(139, 92, 246, 0.5);
+
+    backdrop-filter: blur(12px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+
+    transition: 0.4s ease;
+    animation: cardAppear 0.8s ease both;
+}
+
+/* Different animation delays */
+main section:nth-of-type(2) {
+    animation-delay: 0.2s;
+}
+
+main section:nth-of-type(3) {
+    animation-delay: 0.4s;
+}
+
+/* Card hover */
+main section:hover {
+    transform: translateY(-10px) scale(1.02);
+    border-color: #55e6d0;
+    box-shadow:
+        0 0 15px rgba(85, 230, 208, 0.4),
+        0 0 35px rgba(139, 92, 246, 0.3);
+}
+
+/* Card headings */
+main section h2 {
+    color: #ff75c3;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+/* Skill text */
+main section p {
+    display: inline-block;
+    background: rgba(85, 230, 208, 0.08);
+    border: 1px solid rgba(85, 230, 208, 0.3);
+    color: #e9faff;
+
+    padding: 12px 18px;
+    margin: 8px;
+    border-radius: 12px;
+
+    transition: 0.3s ease;
+}
+
+main section p:hover {
+    background: #55e6d0;
+    color: #10132c;
+    transform: scale(1.08);
+    box-shadow: 0 0 18px #55e6d0;
+}
+
+/* Animations */
+@keyframes cardAppear {
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes titleGlow {
+    from {
+        text-shadow: 0 0 8px #55e6d0;
+    }
+    to {
+        text-shadow: 0 0 25px #8b5cf6;
+    }
+}
+
+/* Mobile design */
+@media (max-width: 600px) {
+    main {
+        padding: 30px 15px;
+    }
+
+    main h1 {
+        font-size: 30px;
+    }
+
+    main section {
+        padding: 20px;
+    }
+}

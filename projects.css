@@ -1,0 +1,145 @@
+body {
+    background:
+        radial-gradient(circle at 10% 20%, #302052 0%, transparent 35%),
+        radial-gradient(circle at 90% 80%, #123c50 0%, transparent 35%),
+        #090d1c;
+    color: #fff;
+}
+
+/* Main content */
+main {
+    max-width: 1150px;
+    margin: auto;
+    padding: 55px 25px;
+}
+
+/* Main heading */
+main h1 {
+    font-size: 43px;
+    color: #55e6d0;
+    text-align: center;
+    text-shadow: 0 0 18px rgba(85, 230, 208, 0.6);
+    animation: headingIn 1s ease;
+}
+
+main > p {
+    color: #c5c9df;
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 45px;
+}
+
+/* Project cards */
+.project-card {
+    position: relative;
+    background: linear-gradient(
+        145deg,
+        rgba(139, 92, 246, 0.16),
+        rgba(85, 230, 208, 0.06)
+    );
+
+    border: 1px solid rgba(85, 230, 208, 0.3);
+    border-radius: 20px;
+    padding: 25px;
+    margin: 20px 0;
+    overflow: hidden;
+
+    transition: 0.4s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-9px);
+    border-color: #ff75c3;
+    box-shadow: 0 0 30px rgba(255, 117, 195, 0.25);
+}
+
+.project-card h2 {
+    color: #ff75c3;
+    font-size: 24px;
+}
+
+.project-card p {
+    color: #d6d9eb;
+    line-height: 1.8;
+}
+
+/* Project number */
+.project-number {
+    color: #55e6d0;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+/* Projects table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 35px;
+    overflow: hidden;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.04);
+}
+
+th {
+    background: linear-gradient(90deg, #7139b8, #245d78);
+    color: white;
+    padding: 18px;
+    font-size: 17px;
+}
+
+td {
+    padding: 17px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    color: #e3e8f5;
+}
+
+tr {
+    transition: 0.3s;
+}
+
+tbody tr:hover {
+    background: rgba(85, 230, 208, 0.12);
+}
+
+/* Project tags */
+.project-tag {
+    display: inline-block;
+    background: rgba(139, 92, 246, 0.2);
+    border: 1px solid #8b5cf6;
+    color: #d9c7ff;
+    padding: 6px 13px;
+    border-radius: 20px;
+    margin: 4px;
+}
+
+/* Page animation */
+@keyframes headingIn {
+    from {
+        opacity: 0;
+        transform: translateY(-25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile */
+@media (max-width: 650px) {
+    main {
+        padding: 30px 12px;
+    }
+
+    main h1 {
+        font-size: 30px;
+    }
+
+    table {
+        font-size: 13px;
+    }
+
+    th, td {
+        padding: 10px 6px;
+    }
+}
